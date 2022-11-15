@@ -1,0 +1,20 @@
+.titulo{
+    background-color:firebrick;
+}
+
+.parrafo {
+    opacity: 0.8;
+}
+
+em {
+    color: #0066ff;
+
+}
+
+body {
+    background-image: url(fondo.jpg);
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-image: center;
+    background-size:cover;
+}

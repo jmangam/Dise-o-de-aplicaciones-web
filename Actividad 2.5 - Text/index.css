@@ -1,0 +1,36 @@
+h1.rojo {
+    font-family: Arial;
+    font-weight: 900;
+    color:#ff0000;
+    /* color: hsl(0, 100%, 50%); */
+}
+
+h1.mayuscula {
+    text-transform: uppercase;
+}
+
+p.verde {
+    font-family: Arial;
+    font-weight: 900;
+    color:rgb(51, 204, 51);
+    /* color:hsl(118, 100%, 50%); */
+}
+
+.azul{
+    background-color: #000080 ;
+    /* background-color: hsl(238, 100%, 50%); */
+}
+
+img{
+    vertical-align: text-top;
+
+}
+
+a {
+    text-decoration: none;
+}
+
+em {
+    text-transform: capitalize;
+}
+
