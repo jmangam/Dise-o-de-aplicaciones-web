@@ -1,0 +1,10 @@
+a{
+    border-style: solid;
+padding: 5px;
+border-radius: 6px;
+/* border-style: 6; */
+}
+
+div {
+    margin-top: 20px;
+}
