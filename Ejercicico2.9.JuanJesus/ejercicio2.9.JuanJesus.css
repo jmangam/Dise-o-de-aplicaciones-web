@@ -1,0 +1,42 @@
+
+h1.titulo{
+    background-color:yellow;
+
+}
+
+body {
+    font: arial;
+  }
+
+h1{
+    border: 1px;
+    border-color: yellow;
+    color: red;
+  }
+
+div{
+    font-family: 'Times New Roman';
+    font-size: 20px;
+}
+
+table{
+        border: green 1px solid;
+
+}
+
+ol{
+  border: blue 1px solid;
+}
+
+img {
+  display: block;
+  visibility: initial;
+  width: 300;
+  height: 300;
+}
+
+p {
+  margin: 1px;
+  padding: 1px;
+  text-align: center;
+}
