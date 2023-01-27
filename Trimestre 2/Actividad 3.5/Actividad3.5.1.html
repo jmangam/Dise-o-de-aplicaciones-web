@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    h1 {
+      position: relative;
+    }
+    p {
+      position: absolute;
+      animation: move-letter 5s ease-in-out 2s infinite alternate;
+    }
+    @keyframes move-letter {
+      0% {
+        left: 0;
+        font-size: 20px;
+        color: red;
+      }
+      25% {
+        left: 25%;
+        font-size: 30px;
+        color: orange;
+      }
+      50% {
+        left: 50%;
+        font-size: 40px;
+        color: yellow;
+      }
+      75% {
+        left: 75%;
+        font-size: 50px;
+        color: green;
+      }
+      100% {
+        left: 100%;
+        font-size: 60px;
+        color: blue;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>
+    <p>p</p>
+  </h1>
+</body>
+</html>

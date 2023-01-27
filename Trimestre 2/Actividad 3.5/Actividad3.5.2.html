@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    div {
+      width: 300px;
+      height: 200px;
+      position: relative;
+    }
+    a {
+      color: blue;
+      font-size: 3em;
+      position: absolute;
+      text-decoration: none;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(0deg);
+      transition: all 0.5s linear;
+    }
+    a:hover {
+      color: red;
+      font-size: 6em;
+      transform: translate(-50%, -50%) rotate(180deg);
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <a href="https://www.google.com/">Link</a>
+  </div>
+</body>
+</html>
