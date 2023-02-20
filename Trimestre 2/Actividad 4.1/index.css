@@ -1,0 +1,251 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f1f1f1;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 20px;
+  }
+  
+  h1 {
+    text-align: center;
+    margin-top: 0;
+  }
+  
+  p {
+    color: #777;
+  }
+  
+  /* Estilos para los campos de entrada */
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  textarea {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 16px;
+  }
+  
+  select {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 16px;
+    appearance: none;
+    -webkit-appearance: none;
+    background: url(./img/down-arrow.svg) no-repeat;
+    background-size: 20px;
+    background-position: right 10px center;
+  }
+  
+  input[type="radio"],
+  input[type="checkbox"] {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  
+  /* Estilos para los botones */
+  button {
+    display: inline-block;
+    background-color: #008CBA;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #005F6B;
+  }
+  
+  /* Estilos para los mensajes de error */
+  .error {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+    display: none;
+  }
+  
+  /* Estilos para los mensajes de éxito */
+  .success {
+    color: green;
+    font-size: 14px;
+    margin-top: 5px;
+    display: none;
+  }
+  
+  /* Estilos para el diálogo */
+  .dialog {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .dialog-content {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    width: 400px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .dialog button {
+    background-color: #ccc;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    float: right;
+  }
+  
+  /* Estilos para el botón de cerrar el diálogo */
+  .close {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+  }
+
+  /* Estilos para el botón de enviar */
+form button[type="submit"] {
+    display: block;
+    margin: 1rem auto;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 2rem;
+    color: #fff;
+    background-color: #6c63ff;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  form button[type="submit"]:hover {
+    background-color: #4f46e5;
+  }
+  
+  /* Estilos para los campos de formulario */
+  form input,
+  form select {
+    display: block;
+    margin: 1rem auto;
+    padding: 0.5rem 1rem;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    font-family: inherit;
+  }
+  
+  form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+  }
+  
+  /* Estilos para los mensajes de error */
+  form input:invalid,
+  form select:invalid {
+    border-color: #ff5252;
+    background-color: #ffebee;
+  }
+  
+  form input:invalid + span,
+  form select:invalid + span {
+    display: block;
+    margin: 0.5rem 0 0 1rem;
+    color: #ff5252;
+    font-size: 0.8rem;
+  }
+  
+  /* Estilos para los detalles del formulario */
+  details {
+    margin: 2rem 0;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+  }
+  
+  summary {
+    font-weight: bold;
+  }
+  
+  /* Estilos para el diálogo */
+  dialog {
+    padding: 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    background-color: #fff;
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.2);
+  }
+  
+  dialog button {
+    display: block;
+    margin: 1rem auto;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 2rem;
+    color: #fff;
+    background-color: #6c63ff;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  dialog button:hover {
+    background-color: #4f46e5;
+  }
+  
+  /* Estilos diferentes según el navegador */
+  @media screen and (-webkit-min-device-pixel-ratio:0) {
+    /* Estilos para Chrome, Safari y Opera */
+    form input {
+      border: 2px solid #ccc;
+    }
+  
+    form button[type="submit"] {
+      background-color: #ff4081;
+    }
+  }
+  
+  @media screen and (min--moz-device-pixel-ratio:0) {
+    /* Estilos para Firefox */
+    form input {
+      border: 2px solid #ccc;
+      padding: 0.75rem 1rem;
+    }
+  
+    form button[type="submit"] {
+      background-color: #ff9800;
+    }
+  }
