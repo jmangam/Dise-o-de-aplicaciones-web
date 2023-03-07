@@ -1,0 +1,263 @@
+<script>
+  const articulos = [
+  {
+    titulo: "Cómo decorar tu casa con los colores de moda",
+    imagen: "imagen1.jpg",
+    texto: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, enim ut tristique lacinia, felis urna vestibulum sapien, ac commodo arcu libero vel justo.",
+    fecha: "Marzo 1, 2023",
+    autor: "Juan Pérez"
+  },
+  {
+    titulo: "Los muebles de diseño más buscados en la web",
+    imagen: "imagen2.jpg",
+    texto: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, enim ut tristique lacinia, felis urna vestibulum sapien, ac commodo arcu libero vel justo.",
+    fecha: "Febrero 28, 2023",
+    autor: "Ana González"
+  },
+  {
+    titulo: "Las tendencias en accesorios para el hogar que no te puedes perder",
+    imagen: "imagen3.jpg",
+    texto: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, enim ut tristique lacinia, felis urna vestibulum sapien, ac commodo arcu libero vel justo.",
+    fecha: "Febrero 25, 2023",
+    autor: "Pedro Fernández"
+  }
+];
+
+
+
+
+function generarArticulos() {
+  const articulosContainer = document.querySelector("#articulos");
+  let html = "";
+  for (let i = 0; i < articulos.length; i++) {
+    const articulo = articulos[i];
+    html += `
+      <article class="articulo">
+        <h3>${articulo.titulo}</h3>
+        <img src="${articulo.imagen}" alt="Imagen del artículo">
+        <p>${articulo.texto}</p>
+        <div class="info">
+          <span class="fecha">${articulo.fecha}</span>
+          <span class="autor">${articulo.autor}</span>
+        </div>
+      </article>
+    `;
+  }
+  articulosContainer.innerHTML = html;
+}
+
+
+
+</script>
+
+
+<body>
+  
+<link rel="stylesheet" href="index.css">
+<header>
+  <div class="header-left">
+    <a href="index.html">
+      <img class="logo" src="logo.png" alt="Logo">
+    </a>
+  </div>
+  <div class="header-right">
+    <nav>
+      <ul>
+        <li><a href="https://www.incibe.es/" target="_blank">Productos</a></li>
+        <li><a href="https://www.osi.es/es" target="_blank">Casa y Hogar</a></li>
+        <li><a href="#">Tendencias y Futuro</a>
+          <ul>
+            <li><a href="tendencias.html">Tendencias</a></li>
+            <li><a href="https://incual.educacion.gob.es/" target="_blank">Simulaciones en 3D</a></li>
+          </ul>
+        </li>
+        <!-- <li><a href="#">Idiomas</a>
+            <ul>
+              <li><a href="#" lang="en">English</a></li>
+              <li><a href="#" lang="fr">Français</a></li>
+              <li><a href="#" lang="de">Deutsch</a></li>
+            </ul>
+        </li> -->
+
+      </ul>
+    </nav>
+
+    <section class="best-seller">
+      <h2>Producto más vendido</h2>
+      <div class="product-info">
+        <img src="best-seller.jpg" alt="Producto más vendido">
+        <div class="product-details">
+          <h3>Producto más vendido</h3>
+          <p>Precio: 99,99 €</p>
+          <p>Valoración: 4.5 estrellas</p>
+        </div>
+      </div>
+    </section>
+    
+    <section class="popular-products">
+      <h2>Productos más visitados</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Producto</th>
+            <th>Visitas</th>
+            <th>Likes</th>
+            <th>Valoración media</th>
+            <th>Unidades en stock</th>
+            <th>Precio</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Producto 1</td>
+            <td>1000</td>
+            <td>500</td>
+            <td>4.5 estrellas</td>
+            <td>50</td>
+            <td>49,99 €</td>
+          </tr>
+          <tr>
+            <td>Producto 2</td>
+            <td>800</td>
+            <td>400</td>
+            <td>4.0 estrellas</td>
+            <td>30</td>
+            <td>29,99 €</td>
+          </tr>
+          <tr>
+            <td>Producto 3</td>
+            <td>700</td>
+            <td>300</td>
+            <td>3.5 estrellas</td>
+            <td>20</td>
+            <td>19,99 €</td>
+          </tr>
+          <tr>
+            <td>Producto 4</td>
+            <td>500</td>
+            <td>200</td>
+            <td>4.0 estrellas</td>
+            <td>10</td>
+            <td>39,99 €</td>
+          </tr>
+          <tr>
+            <td>Producto 5</td>
+            <td>300</td>
+            <td>100</td>
+            <td>4.5 estrellas</td>
+            <td>5</td>
+            <td>59,99 €</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td>Totales:</td>
+            <td>3300</td>
+            <td>1500</td>
+            <td>4.1 estrellas</td>
+            <td></td>
+            <td></td>
+          </tr>
+        </tfoot>
+      </table>
+    </section>
+
+
+    <!-- <section id="tendencias">
+      <h2>Últimas tendencias en decoración</h2>
+      <div id="articulos"></div>
+    </section> -->
+
+
+
+    <section id="tendencias">
+      <h2>Últimas tendencias en decoración</h2>
+      <div class="articulo">
+        <img class="imagen" src="imagen1.jpg" alt="Tendencia 1">
+        <h3>Tendencia 1</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo commodo malesuada. Nulla facilisi. Praesent nec mauris odio. </p>
+        <p class="fecha">Publicado el 1 de enero de 2023 por Juan Pérez</p>
+      </div>
+      <div class="articulo">
+        <img class="imagen" src="imagen2.jpg" alt="Tendencia 2">
+        <h3>Tendencia 2</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo commodo malesuada. Nulla facilisi. Praesent nec mauris odio. </p>
+        <p class="fecha">Publicado el 15 de enero de 2023 por Ana Gómez</p>
+      </div>
+    </section>
+
+
+
+    <form action="#" method="post">
+      <fieldset>
+        <legend>Opiniones y suscripciones</legend>
+        
+        <div class="form-group">
+          <label for="nick">Nick/Identificador:</label>
+          <input type="text" id="nick" name="nick" maxlength="8" required>
+          <span class="error-message"></span>
+        </div>
+        
+        <div class="form-group">
+          <label for="email">Correo electrónico:</label>
+          <input type="email" id="email" name="email" placeholder="ejemplo@correo.com" required>
+          <span class="error-message"></span>
+        </div>
+        
+        <div class="form-group">
+          <label for="products-liked">Productos que más te han gustado:</label>
+          <select id="products-liked" name="products-liked[]" multiple>
+            <option value="1">Producto 1</option>
+            <option value="2">Producto 2</option>
+            <option value="3">Producto 3</option>
+            <option value="4">Producto 4</option>
+            <option value="5">Producto 5</option>
+          </select>
+        </div>
+        
+        <div class="form-group">
+          <label for="postal-code">Código Postal de residencia:</label>
+          <input type="text" id="postal-code" name="postal-code" pattern="[0-4][0-9]{4}" required>
+          <span class="error-message"></span>
+        </div>
+        
+        <div class="form-group">
+          <label>Redes sociales que sigues habitualmente:</label>
+          <input type="checkbox" id="social-media-1" name="social-media[]" value="Twitter">
+          <label for="social-media-1">Twitter</label>
+          <input type="checkbox" id="social-media-2" name="social-media[]" value="Facebook">
+          <label for="social-media-2">Facebook</label>
+          <input type="checkbox" id="social-media-3" name="social-media[]" value="Instagram">
+          <label for="social-media-3">Instagram</label>
+        </div>
+        
+        <div class="form-group">
+          <label for="assembly-service">¿Contratarías servicio de montaje de muebles en caso de realizar un pedido?</label>
+          <div class="radio-group">
+            <input type="radio" id="assembly-service-yes" name="assembly-service" value="yes" required>
+            <label for="assembly-service-yes">Sí</label>
+            <input type="radio" id="assembly-service-no" name="assembly-service" value="no">
+            <label for="assembly-service-no">No</label>
+          </div>
+          <span class="error-message"></span>
+        </div>
+        
+        <div class="button-group">
+          <button type="submit">Enviar</button>
+          <button type="reset">Cancelar</button>
+        </div>
+        
+      </fieldset>
+    </form>
+    
+
+    <div class="header-lang">
+      <ul>
+        <li><a href="#" lang="en">English</a></li>
+        <li><a href="#" lang="fr">Français</a></li>
+        <li><a href="#" lang="de">Deutsch</a></li>
+      </ul>
+    </div>
+  </div>
+</header>
+</body>
