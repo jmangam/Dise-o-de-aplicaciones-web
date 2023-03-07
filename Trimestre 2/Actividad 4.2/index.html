@@ -1,0 +1,479 @@
+  <!DOCTYPE html>
+  <html>
+  <head>
+    <title></title>
+    <link rel="stylesheet" href="index.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <script>
+    $(document).ready(function() {
+    const slider = $('.slider');
+    const thumbnails = $('.thumbnails img');
+
+    thumbnails.on('click', function() {
+        counter = $(this).index();
+        slider.css('transform', `translateX(-${counter * 25}%)`);
+        setActiveThumbnail();
+    });
+    
+    function setActiveThumbnail() {
+        thumbnails.removeClass('active');
+        $(thumbnails[counter]).addClass('active');
+    }
+
+
+    $('#1').click(function() {
+      var imagenes = ["barcelona.jpg", "1996_Atlanta.png", "2000_Sydney.png", "atenas-2004.png", "Beijing_200.jpg", "Logo-Londres-2012-600.jpg", "rio2016.jpg", "tokyo.png"];
+      var indice = 0;
+
+      $('.prev-btn').click(function() {
+      indice--;
+      if (indice < 0) {
+        indice = imagenes.length - 1;
+      }
+      $('.main-image').attr('src', imagenes[indice]);
+    });
+
+    $('.next-btn').click(function() {
+      indice++;
+      if (indice >= imagenes.length) {
+        indice = 0;
+      }
+      $('.main-image').attr('src', imagenes[indice]);
+    });
+
+
+
+// 2
+    $('#2').click(function() {
+      var imagenes = ["1.jpg", "2.jpg", "3.jpg"];
+      var indice = 0;
+
+      $('.prev-btn').click(function() {
+      indice--;
+      if (indice < 0) {
+        indice = imagenes.length - 1;
+      }
+      $('.main-image').attr('src', imagenes[indice]);
+    });
+
+    $('.next-btn').click(function() {
+      indice++;
+      if (indice >= imagenes.length) {
+        indice = 0;
+      }
+      $('.main-image').attr('src', imagenes[indice]);
+    });
+      });
+
+      // 3
+    $('#3').click(function() {
+    var imagenes = ["4.jpg", "5.jpg"];
+    var indice = 0;
+
+      $('.prev-btn').click(function() {
+      indice--;
+      if (indice < 0) {
+        indice = imagenes.length - 1;
+      }
+      $('.main-image').attr('src', imagenes[indice]);
+    });
+
+    $('.next-btn').click(function() {
+      indice++;
+      if (indice >= imagenes.length) {
+        indice = 0;
+      }
+      $('.main-image').attr('src', imagenes[indice]);
+    });
+      });
+
+      // 4
+    $('#4').click(function() {
+    var imagenes = ["7.jpg", "6.jpg"];
+    var indice = 0;
+
+      $('.prev-btn').click(function() {
+      indice--;
+      if (indice < 0) {
+        indice = imagenes.length - 1;
+      }
+      $('.main-image').attr('src', imagenes[indice]);
+    });
+
+    $('.next-btn').click(function() {
+      indice++;
+      if (indice >= imagenes.length) {
+        indice = 0;
+      }
+      $('.main-image').attr('src', imagenes[indice]);
+    });
+      });
+
+      // 5
+    $('#5').click(function() {
+    var imagenes = ["8.jpg", "9.jpg"];
+    var indice = 0;
+
+      $('.prev-btn').click(function() {
+      indice--;
+      if (indice < 0) {
+        indice = imagenes.length - 1;
+      }
+      $('.main-image').attr('src', imagenes[indice]);
+    });
+
+    $('.next-btn').click(function() {
+      indice++;
+      if (indice >= imagenes.length) {
+        indice = 0;
+      }
+      $('.main-image').attr('src', imagenes[indice]);
+    });
+      });
+
+      // 6
+    $('#6').click(function() {
+    var imagenes = ["10.jpg", "11.jpg"];
+    var indice = 0;
+
+      $('.prev-btn').click(function() {
+      indice--;
+      if (indice < 0) {
+        indice = imagenes.length - 1;
+      }
+      $('.main-image').attr('src', imagenes[indice]);
+    });
+
+    $('.next-btn').click(function() {
+      indice++;
+      if (indice >= imagenes.length) {
+        indice = 0;
+      }
+      $('.main-image').attr('src', imagenes[indice]);
+    });
+      });
+
+      // 7
+    $('#7').click(function() {
+    var imagenes = ["12.jpg", "13.jpg"];
+    var indice = 0;
+
+      $('.prev-btn').click(function() {
+      indice--;
+      if (indice < 0) {
+        indice = imagenes.length - 1;
+      }
+      $('.main-image').attr('src', imagenes[indice]);
+    });
+
+    $('.next-btn').click(function() {
+      indice++;
+      if (indice >= imagenes.length) {
+        indice = 0;
+      }
+      $('.main-image').attr('src', imagenes[indice]);
+    });
+      });
+
+      // 8
+      $('#8').click(function() {
+    var imagenes = ["14.jpg", "15.jpg"];
+    var indice = 0;
+
+      $('.prev-btn').click(function() {
+      indice--;
+      if (indice < 0) {
+        indice = imagenes.length - 1;
+      }
+      $('.main-image').attr('src', imagenes[indice]);
+    });
+
+    $('.next-btn').click(function() {
+      indice++;
+      if (indice >= imagenes.length) {
+        indice = 0;
+      }
+      $('.main-image').attr('src', imagenes[indice]);
+    });
+      });
+
+
+
+
+
+
+
+
+
+
+
+    })
+
+  });
+
+
+  </script>
+
+  </head>
+  <body>
+    <header>
+      <canvas id="banner" width="800" height="80px"></canvas>
+      <h1 style="text-align: center;">Ejercicio 4.2</h1>
+    </header>
+
+    <div class="container">
+      <aside>
+        <ul>
+          <li><a id="1" href="#" class="olimpiada" data-name="Tokyo 2020">Tokyo 2020</a></li>
+          <li><a id="2" href="#" class="olimpiada" data-name="Rio 2016">Rio 2016</a></li>
+          <li><a id="3" href="#" class="olimpiada" data-name="London 2012">London 2012</a></li>
+          <li><a id="4" href="#" class="olimpiada" data-name="Beijing 2008">Beijing 2008</a></li>
+          <li><a id="5" href="#" class="olimpiada" data-name="Athens 2004">Athens 2004</a></li>
+          <li><a id="6" href="#" class="olimpiada" data-name="Sydney 2000">Sydney 2000</a></li>
+          <li><a id="7" href="#" class="olimpiada" data-name="Atlanta 1996">Atlanta 1996</a></li>
+          <li><a id="8" href="#" class="olimpiada" data-name="Barcelona 1992">Barcelona 1992</a></li>
+        </ul>
+      </aside>
+
+      <div class="main">
+        <div class="image-container slider">
+          <img src="barcelona.jpg" alt="Imagen principal" class="main-image">
+          <div class="slider-nav">
+            <button class="prev-btn">&lt;</button>
+            <button class="next-btn">&gt;</button>
+          </div>
+        </div>
+
+
+        <!-- 1 -->
+        <div  class="image-section" id="section1">
+          <div class="thumbnail">
+            <img src="1996_Atlanta.png" alt="Imagen 1" class="thumbnail-image">
+          </div>
+          <div class="thumbnail">
+            <img src="2000_Sydney.png" alt="Imagen 2" class="thumbnail-image">
+          </div>
+          <div class="thumbnail">
+            <img src="atenas-2004.png" alt="Imagen 3" class="thumbnail-image">
+          </div>
+          <div class="thumbnail">
+            <img src="Beijing_200.jpg" alt="Imagen 4" class="thumbnail-image">
+          </div>
+          <div class="thumbnail">
+            <img src="Logo-Londres-2012-600.jpg" alt="Imagen 5" class="thumbnail-image">
+          </div>
+          <div class="thumbnail">
+            <img src="rio2016.jpg" alt="Imagen 6" class="thumbnail-image">
+          </div>
+          <div class="thumbnail">
+            <img   src="tokyo.png" alt="Imagen 7" class="thumbnail-image">
+          </div>
+        </div>
+
+        <!-- 2 -->
+        <div class="image-section" id="section2">
+          <div class="thumbnail" class="image-section">
+            <img src="1.jpg" alt="Imagen 1" class="thumbnail-image">
+          </div>
+          <div class="thumbnail" class="image-section">
+            <img src="2.jpg"  alt="Imagen 2" class="thumbnail-image">
+          </div>
+          <div class="thumbnail" class="image-section">
+            <img src="3.jpg" alt="Imagen 3" class="thumbnail-image">
+          </div>
+        </div>
+
+        <!-- 3 -->
+        <div class="image-section" id="section3">
+          <div class="thumbnail" class="image-section">
+            <img src="4.jpg" alt="Imagen 1" class="thumbnail-image">
+          </div>
+          <div class="thumbnail" class="image-section">
+            <img src="5.jpg"  alt="Imagen 2" class="thumbnail-image">
+          </div>
+        </div>
+
+        <!-- 4 -->
+        <div class="image-section" id="section4">
+          <div class="thumbnail" class="image-section">
+            <img src="6.jpg" alt="Imagen 1" class="thumbnail-image">
+          </div>
+          <div class="thumbnail" class="image-section">
+            <img src="7.jpg"  alt="Imagen 2" class="thumbnail-image">
+          </div>
+        </div>
+
+        <!-- 5 -->
+        <div class="image-section" id="section5">
+          <div class="thumbnail" class="image-section">
+            <img src="8.jpg" alt="Imagen 1" class="thumbnail-image">
+          </div>
+          <div class="thumbnail" class="image-section">
+            <img src="9.jpg"  alt="Imagen 2" class="thumbnail-image">
+          </div>
+        </div>
+
+        <!-- 6 -->
+        <div class="image-section" id="section6">
+          <div class="thumbnail" class="image-section">
+            <img src="10.jpg" alt="Imagen 1" class="thumbnail-image">
+          </div>
+          <div class="thumbnail" class="image-section">
+            <img src="11.jpg"  alt="Imagen 2" class="thumbnail-image">
+          </div>
+        </div>
+
+        <!-- 7 -->
+        <div class="image-section" id="section7">
+          <div class="thumbnail" class="image-section">
+            <img src="12.jpg" alt="Imagen 1" class="thumbnail-image">
+          </div>
+          <div class="thumbnail" class="image-section">
+            <img src="13.jpg"  alt="Imagen 2" class="thumbnail-image">
+          </div>
+        </div>
+
+        <!-- 8 -->
+        <div class="image-section" id="section8">
+          <div class="thumbnail" class="image-section">
+            <img src="14.jpg" alt="Imagen 1" class="thumbnail-image">
+          </div>
+          <div class="thumbnail" class="image-section">
+            <img src="15.jpg"  alt="Imagen 2" class="thumbnail-image">
+          </div>
+        </div>
+
+
+        <script>
+          const button1 = document.getElementById("1");
+          const button2 = document.getElementById("2");
+          const button3 = document.getElementById("3");
+          const button4 = document.getElementById("4");
+          const button5 = document.getElementById("5");
+          const button6 = document.getElementById("6");
+          const button7 = document.getElementById("7");
+          const button8 = document.getElementById("8");
+
+          const section1 = document.getElementById("section1");
+          const section2 = document.getElementById("section2");
+          const section3 = document.getElementById("section3");
+          const section4 = document.getElementById("section4");
+          const section5 = document.getElementById("section5");
+          const section6 = document.getElementById("section6");
+          const section7 = document.getElementById("section7");
+          const section8 = document.getElementById("section8");
+
+          button1.addEventListener("click", () => {
+            section1.classList.add("active");
+            section2.classList.remove("active");
+            section3.classList.remove("active");
+            section4.classList.remove("active");
+            section5.classList.remove("active");
+            section6.classList.remove("active");
+            section7.classList.remove("active");
+            section8.classList.remove("active");
+          });
+
+          button2.addEventListener("click", () => {
+            section1.classList.remove("active");
+            section2.classList.add("active");
+            section3.classList.remove("active");
+            section4.classList.remove("active");
+            section5.classList.remove("active");
+            section6.classList.remove("active");
+            section7.classList.remove("active");
+            section8.classList.remove("active");
+          });
+
+          button3.addEventListener("click", () => {
+            section1.classList.remove("active");
+            section2.classList.remove("active");
+            section3.classList.add("active");
+            section4.classList.remove("active");
+            section5.classList.remove("active");
+            section6.classList.remove("active");
+            section7.classList.remove("active");
+            section8.classList.remove("active");
+          });
+
+          button4.addEventListener("click", () => {
+            section1.classList.remove("active");
+            section2.classList.remove("active");
+            section3.classList.remove("active");
+            section4.classList.add("active");
+            section5.classList.remove("active");
+            section6.classList.remove("active");
+            section7.classList.remove("active");
+            section8.classList.remove("active");
+          });
+
+          button5.addEventListener("click", () => {
+            section1.classList.remove("active");
+            section2.classList.remove("active");
+            section3.classList.remove("active");
+            section4.classList.remove("active");
+            section5.classList.add("active");
+            section6.classList.remove("active");
+            section7.classList.remove("active");
+            section8.classList.remove("active");
+          });
+
+          button6.addEventListener("click", () => {
+            section1.classList.remove("active");
+            section2.classList.remove("active");
+            section3.classList.remove("active");
+            section4.classList.remove("active");
+            section5.classList.remove("active");
+            section6.classList.add("active");
+            section7.classList.remove("active");
+            section8.classList.remove("active");
+          });
+
+          button7.addEventListener("click", () => {
+            section1.classList.remove("active");
+            section2.classList.remove("active");
+            section3.classList.remove("active");
+            section4.classList.remove("active");
+            section5.classList.remove("active");
+            section6.classList.remove("active");
+            section7.classList.add("active");
+            section8.classList.remove("active");
+          });
+
+          button8.addEventListener("click", () => {
+            section1.classList.remove("active");
+            section2.classList.remove("active");
+            section3.classList.remove("active");
+            section4.classList.remove("active");
+            section5.classList.remove("active");
+            section6.classList.remove("active");
+            section7.classList.remove("active");
+            section8.classList.add("active");
+          });
+
+
+
+
+
+
+        </script>
+
+
+
+
+
+
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="galeria.js"></script>
+
+    <footer>
+      <div class="container">
+        <p>&copy; 2022/23</p>
+      </div>
+    </footer>
+  </body>
+  </html>
